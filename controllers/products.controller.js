@@ -11,3 +11,10 @@ module.exports.create = (req, res, next) => {
     .then(newProduct => res.status(200).json(newProduct))
     .catch(next)
 }
+
+
+module.exports.list = (req, res, next) => {
+  Product.find()
+    .then(products => res.status(200).json(products))
+    .catch(next)
+}
