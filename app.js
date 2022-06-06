@@ -55,7 +55,7 @@ app.use((error, req, res, next) => {
   res.status(error.status).json(data);
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT_PRODUCTION || 3001;
 
 app.listen(port, () => {
   console.log(`Ready! Listen on port ${port}`);
